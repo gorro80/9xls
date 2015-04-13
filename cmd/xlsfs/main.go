@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"os"
 	"fmt"
+	"os"
 )
 
 const usageMsg = `
@@ -17,7 +17,7 @@ The following structure depends on [TBD].
 
 func main() {
 	addr := flag.String("addr", "localhost:5640", "service listen address")
-    flag.Usage = func() {
+	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "Usage: %s [options] <filename.xlsx>", os.Args[0])
 		fmt.Fprintf(os.Stderr, usageMsg)
 		fmt.Fprintf(os.Stderr, "\nOptions:\n")
